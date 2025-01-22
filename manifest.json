@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "igihe-plus",
+  "version": "1.0",
+  "description": "A web extension for Igihe.com with features like removing ads, theme settings, and additional functionalities",
+  "action": {
+    "default_popup": "./src/index.html",
+    "default_icon": {
+      "16": "./assets/icon16.png",
+      "32": "./assets/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.igihe.com/*"],
+      "js": ["./src/content-scripts/ads-remover.js"],
+      "css": ["./src/content-scripts/theme.css"]
+    }
+  ]
+}
