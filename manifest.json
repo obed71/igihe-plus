@@ -16,5 +16,6 @@
       "js": ["./src/content-scripts/ads-remover.js"],
       "css": ["./src/content-scripts/theme.css"]
     }
-  ]
+  ],
+  "permissions": ["storage"]
 }
