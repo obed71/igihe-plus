@@ -1,0 +1,13 @@
+:root {
+  --bg-color: hsl(0, 0%, 20%);
+  --text-color: hsl(0, 0%, 100%);
+  --accent-color: hsl(34, 90%, 60%);
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 1rem;
+}
