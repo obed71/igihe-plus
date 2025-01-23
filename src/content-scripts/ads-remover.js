@@ -4,27 +4,34 @@ browser.storage.local.get('settings').then((data = {}) => {
   if (adsRemover) removeAds();
 });
 
+const selectors = [
+  { selector: '.topbanner-img' },
+  { selector: '.advertorials' },
+  { selector: '[class*="banner300x250"]', all: true },
+  { selector: '[href*="kwamamaza"]', all: true, parent: true },
+  { selector: '.title-ads', all: true, parent: true },
+  { selector: '.rectangle', all: true, parent: true },
+  { selector: '.label-logo > div:nth-child(2)' },
+];
+
 function removeAds() {
-  const ads = [
-    document.querySelector('.topbanner-img'),
-    document.querySelector('.advertorials'),
-    ...document.querySelectorAll('[class*="banner300x250"]'),
-  ];
+  const elements = getElements();
 
-  const kwamamazaAds = Array.from(
-    document.querySelectorAll('[href*="kwamamaza"]')
-  );
-  ads.push(...kwamamazaAds.map((ad) => ad?.parentElement));
+  elements.forEach((el) => el?.remove());
+}
 
-  const titleAds = Array.from(document.querySelectorAll('.title-ads'));
-  ads.push(...titleAds.map((ad) => ad?.parentElement));
-
-  const adBanners = Array.from(
-    document.querySelectorAll('[src*="ads300x250"]')
-  );
-  ads.push(...adBanners.map((ad) => ad?.parentElement));
-
-  ads.forEach((ad) => {
-    ad?.remove();
+function getElements() {
+  const elements = selectors.map((slct) => {
+    if (slct.all && slct.parent) {
+      return Array.from(document.querySelectorAll(slct.selector)).map(
+        (el) => el.parentElement
+      );
+    } else if (slct.all) {
+      return Array.from(document.querySelectorAll(slct.selector));
+    } else {
+      return document.querySelector(slct.selector);
+    }
   });
+
+  return elements.flatMap((el) => el);
 }
