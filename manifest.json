@@ -13,7 +13,10 @@
   "content_scripts": [
     {
       "matches": ["*://*.igihe.com/*"],
-      "js": ["./src/content-scripts/ads-remover.js"],
+      "js": [
+        "./src/content-scripts/ads-remover.js",
+        "./src/content-scripts/theme.js"
+      ],
       "css": ["./src/content-scripts/theme.css"]
     }
   ],
