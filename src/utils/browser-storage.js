@@ -15,7 +15,7 @@ export default class {
   }
 
   async update(newData) {
-    const oldData = await this.read();
+    const oldData = (await this.read()) || {};
     await this.create({ ...oldData, ...newData });
   }
 
