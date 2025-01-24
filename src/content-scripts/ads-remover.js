@@ -1,8 +1,11 @@
-browser.storage.local.get('settings').then((data = {}) => {
-  const adsRemover = data?.settings?.['ads-remover'] || false;
+setInterval(() => {
+  browser.storage.local.get('settings').then((data = {}) => {
+    const adsRemover = data?.settings?.['ads-remover'] || false;
 
-  if (adsRemover) removeAds();
-});
+    if (adsRemover) removeAds();
+    else addAds();
+  });
+}, 0);
 
 const selectors = [
   { selector: '.topbanner-img' },
@@ -17,7 +20,17 @@ const selectors = [
 function removeAds() {
   const elements = getElements();
 
-  elements.forEach((el) => el?.remove());
+  elements.forEach((element) => {
+    if (element) element.style.display = 'none';
+  });
+}
+
+function addAds() {
+  const elements = getElements();
+
+  elements.forEach((element) => {
+    if (element) element.style.display = '';
+  });
 }
 
 function getElements() {
