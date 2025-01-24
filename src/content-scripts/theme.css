@@ -1,0 +1,50 @@
+:root {
+  --bg-color: hsl(0, 0%, 11%);
+  --text-color: hsl(0, 0%, 100%);
+  --accent-color: hsl(207.8, 69.3%, 73.1%);
+}
+
+body.theme {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  background-image: none;
+  opacity: 0.85;
+}
+
+.theme {
+  & .news-section {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+}
+
+.search-box-theme {
+  border: none;
+  box-shadow: none;
+}
+
+.search-form {
+  border: 3px solid var(--text-color);
+  border-radius: 5px;
+  background-color: transparent !important;
+}
+
+.search-form:has(input.search-text:focus) {
+  border-color: var(--accent-color);
+}
+
+.search-box-theme input.search-box,
+input.search-text {
+  border-color: var(--text-color) !important;
+  background-color: var(--bg-color);
+  color: var(--text-color) !important;
+  outline: none !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 5px !important;
+  border-width: 3px !important;
+  transition: border-color 0.2s;
+}
+
+.search-box-theme input.search-box:focus {
+  border-color: var(--accent-color) !important;
+}

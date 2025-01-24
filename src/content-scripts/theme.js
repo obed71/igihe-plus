@@ -3,4 +3,7 @@ browser.storage.local.get('settings').then((data = {}) => {
 
   if (!theme) return null;
   document.body.classList.add('theme');
+
+  const searchBoxEl = document.querySelector('.search-box');
+  searchBoxEl.parentElement.parentElement.classList.add('search-box-theme');
 });
