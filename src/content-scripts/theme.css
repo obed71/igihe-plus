@@ -28,18 +28,18 @@ body.theme {
   box-shadow: none;
 }
 
-.search-form {
+.theme .search-form {
   border: 3px solid var(--text-color);
   border-radius: 5px;
   background-color: transparent !important;
 }
 
-.search-form:has(input.search-text:focus) {
+.theme .search-form:has(input.search-text:focus) {
   border-color: var(--accent-color);
 }
 
 .search-box-theme input.search-box,
-input.search-text {
+.theme .search-text {
   border-color: var(--text-color) !important;
   background-color: var(--bg-color);
   color: var(--text-color) !important;
