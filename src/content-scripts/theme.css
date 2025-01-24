@@ -16,6 +16,11 @@ body.theme {
     background-color: var(--bg-color);
     color: var(--text-color);
   }
+
+  & [class*='news-title'] a,
+  & .time a span {
+    color: var(--text-color);
+  }
 }
 
 .search-box-theme {
