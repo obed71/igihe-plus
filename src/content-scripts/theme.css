@@ -2,6 +2,7 @@
   --bg-color: hsl(0, 0%, 11%);
   --text-color: hsl(0, 0%, 100%);
   --accent-color: hsl(207.8, 69.3%, 73.1%);
+  --shadow: 0 0 10px 0 hsla(0, 0%, 100%, 0.5);
 }
 
 body.theme {
@@ -17,9 +18,38 @@ body.theme {
     color: var(--text-color);
   }
 
-  & [class*='news-title'] a,
-  & .time a span {
-    color: var(--text-color);
+  & a,
+  & a span,
+  & [class^='title-section'],
+  & .irembo a,
+  & .cartoons-slider a {
+    color: var(--text-color) !important;
+  }
+
+  & .irembo {
+    background-color: var(--bg-color);
+  }
+
+  & .row:first-child [class*='flashnews'] a {
+    color: var(--bg-color) !important;
+  }
+
+  & .standx {
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+
+    & .person_title {
+      color: var(--text-color);
+    }
+  }
+
+  & .homenews {
+    border: none;
+  }
+
+  & .article-wrap {
+    border: none;
   }
 }
 
