@@ -1,9 +1,17 @@
 setInterval(() => {
   browser.storage.local.get('settings').then((data = {}) => {
     const adsRemover = data?.settings?.['ads-remover'] || false;
+    const theme = data?.settings?.['theme'] || false;
 
     if (adsRemover) removeAds();
-    else addAds();
+    else {
+      addAds();
+      const topbanner = document.querySelector('.topbanner-img');
+
+      if (theme && topbanner.style.visibility === 'hidden') {
+        topbanner.style.display = 'none';
+      }
+    }
   });
 }, 0);
 
