@@ -23,6 +23,7 @@ const selectors = [
   { selector: '.title-ads', all: true, parent: true },
   { selector: '.rectangle', all: true, parent: true },
   { selector: '.label-logo > div:nth-child(2)' },
+  { selector: 'img[src*="available"]', all: true },
 ];
 
 function removeAds() {
