@@ -23,6 +23,8 @@ const selectors = [
   { selector: '.rectangle', all: true, parent: true },
   { selector: '.label-logo > div:nth-child(2)' },
   { selector: 'img[src*="available"]', all: true },
+  { selector: '.article-banner-section', all: true },
+  { selector: '.featured-section' },
 ];
 
 function removeAds() {

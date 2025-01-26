@@ -22,7 +22,9 @@ body.theme {
   & a span,
   & [class^='title-section'],
   & .irembo a,
-  & .cartoons-slider a {
+  & .cartoons-slider a,
+  & .f-time,
+  & .f-title a {
     color: var(--text-color) !important;
   }
 
@@ -30,7 +32,7 @@ body.theme {
     background-color: var(--bg-color);
   }
 
-  & .row:first-child [class*='flashnews'] a {
+  & .row:first-child [class*='flashnews'] a:not(.f-title a) {
     color: var(--bg-color) !important;
   }
 
@@ -50,6 +52,13 @@ body.theme {
 
   & .article-wrap {
     border: none;
+  }
+
+  & .wrap-article {
+    & .title-article,
+    & p {
+      color: var(--text-color);
+    }
   }
 }
 
@@ -82,4 +91,17 @@ body.theme {
 
 .search-box-theme input.search-box:focus {
   border-color: var(--accent-color) !important;
+}
+
+@media all and (prefers-color-scheme: light) {
+  :root {
+    --bg-color: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 0%);
+    --accent-color: hsl(207.9, 90.3%, 24.3%);
+    --shadow: 0 0 10px 0 hsla(0, 0%, 100%, 0.5);
+  }
+
+  body.theme {
+    opacity: 1;
+  }
 }
