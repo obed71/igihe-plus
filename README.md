@@ -24,13 +24,13 @@ Open a terminal, command Prompt, PowerShell, or Git Bash. and navigate to the de
 - Using **https**
 
   ```bash
-  git clone 'https://github.com/obed71/igihe-plus.git'
+  git clone https://github.com/obed71/igihe-plus.git
   ```
 
 - Using **ssh-key**
 
   ```bash
-  git clone 'git@github.com:obed71/igihe-plus.git'
+  git clone git@github.com:obed71/igihe-plus.git
   ```
 
 > **Note 3:** _If you don't have git in your computer, just download a zip file._
