@@ -55,7 +55,7 @@ We welcome contributions to IGIHE-PLUS! If you have an idea for a new feature or
 2. **Clone your fork**: Clone your forked repository to your local machine.
 
 ```bash
-git clone 'https://github.com/<your-username>/igihe-plus.git'
+git clone https://github.com/<your-username>/igihe-plus.git
 ```
 
 3. **Create a new branch**: Create a new branch for your feature or bug fix.
