@@ -45,6 +45,8 @@ Open a terminal, command Prompt, PowerShell, or Git Bash. and navigate to the de
 
 - For **Edge** and **Chrome** users: read [this post](https://cassidoo.co/post/test-browser-extensions/) by Cassidy Williams.
 
+> **Note 4**: _Because this project is still under development, it is available only for firefox users!_
+
 ## 3. Contributing
 
 We welcome contributions to IGIHE-PLUS! If you have an idea for a new feature or have found a bug, please open an issue on our [GitHub repository](https://github.com/obed71/igihe-plus/issues).
@@ -55,7 +57,7 @@ We welcome contributions to IGIHE-PLUS! If you have an idea for a new feature or
 2. **Clone your fork**: Clone your forked repository to your local machine.
 
 ```bash
-git clone 'https://github.com/<your-username>/igihe-plus.git'
+git clone https://github.com/<your-username>/igihe-plus.git
 ```
 
 3. **Create a new branch**: Create a new branch for your feature or bug fix.
@@ -79,6 +81,6 @@ git push origin my-feature-branch
 
 7. **Open a pull request**: Go to the original repository and open a pull request with a description of your changes.
 
-> **Note 4:** _Please ensure your code follows the project's coding standards and includes appropriate tests._
+> **Note 5:** _Please ensure your code follows the project's coding standards and includes appropriate tests._
 
 Thank you for contributing to IGIHE-PLUS!
