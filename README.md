@@ -19,18 +19,10 @@ There are different ways to run a browser extension depending on which browser y
 
 ### Step 1: Clone repository
 
-Open a terminal, command Prompt, PowerShell, or Git Bash. and navigate to the desired directory. Then run one of the following command:
-
-- Using **https**
+Open a terminal, command Prompt, PowerShell, or Git Bash. and navigate to the desired directory. Then run the following command:
 
   ```bash
   git clone https://github.com/obed71/igihe-plus.git
-  ```
-
-- Using **ssh-key**
-
-  ```bash
-  git clone git@github.com:obed71/igihe-plus.git
   ```
 
 > **Note 3:** _If you don't have git in your computer, just download a zip file._
